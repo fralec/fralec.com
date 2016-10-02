@@ -55,7 +55,7 @@ function setParticles(color) {
             },
             "move": {
                 "enable": true,
-                "speed": 2,
+                "speed": 1,
                 "direction": "none",
                 "random": false,
                 "straight": false,
@@ -114,13 +114,10 @@ function setParticles(color) {
 function setup() {
     document.querySelector("#main").addEventListener("mouseenter", function () {
         document.querySelector("body").className = "invert";
-        document.querySelector("div.subdiv").lastElementChild.innerHTML = document.querySelector("#stalk-me").outerHTML;
     });
     document.querySelector("#main").addEventListener("mouseleave", function () {
         document.querySelector("body").className = "";
-        document.querySelector("div.subdiv").lastElementChild.innerHTML = content;
     });
 }
-var content = document.querySelector("div.subdiv").lastElementChild.innerHTML;
 setParticles("#000");
 setTimeout(setup, 500);

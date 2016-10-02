@@ -6,16 +6,18 @@ body {
     height: 100vh;
     font-family: lato;
     background-color: #FEFEFE;
-    -webkit-transition: background-color 300ms linear;
-    -moz-transition: background-color 300ms linear;
-    -ms-transition: background-color 300ms linear;
-    -o-transition: background-color 300ms linear;
-    transition: background-color 300ms linear;
+    -webkit-transition: 300ms linear;
+    -moz-transition: 300ms linear;
+    -ms-transition: 300ms linear;
+    -o-transition: 300ms linear;
+    transition: 300ms linear;
+    overflow:hidden;
 }
 
 canvas {
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 div#main {
@@ -72,7 +74,7 @@ svg {
     padding-right: 5px;
 }
 
-div.subdiv:last-child div#stalk-me {
+body.invert div#stalk-me {
     display: block;
 }
 
@@ -105,6 +107,7 @@ div#stalk-me ul li a i {
     zoom: 1.2;
     padding: 8px;
     color: #FFF;
+    line-height: 18px;
 }
 
 body.invert {
@@ -124,4 +127,10 @@ div#main:hover {
 
 div#main:hover div.subdiv {
     border-color: #FFF;
+}
+
+div#main:hover div.subdiv > h1,
+div#main:hover div.subdiv > h2,
+div#main:hover div.subdiv > h3 {
+    display: none;
 }
