@@ -74,7 +74,7 @@ svg {
     padding-right: 5px;
 }
 
-body.invert div#stalk-me {
+div#main:hover div#stalk-me {
     display: block;
 }
 
