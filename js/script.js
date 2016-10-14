@@ -4,8 +4,8 @@ function setParticles(color) {
             "number": {
                 "value": 58,
                 "density": {
-                    "enable": true,
-                    "value_area": 631
+                    "enable": false,
+                    "value_area": 600
                 }
             },
             "color": {
@@ -76,7 +76,7 @@ function setParticles(color) {
                     "mode": "grab"
                 },
                 "onclick": {
-                    "enable": true,
+                    "enable": false,
                     "mode": "push"
                 },
                 "resize": true
@@ -110,14 +110,4 @@ function setParticles(color) {
         "retina_detect": true
     });
 }
-
-function setup() {
-    document.querySelector("#main").addEventListener("mouseenter", function () {
-        document.querySelector("body").className = "invert";
-    });
-    document.querySelector("#main").addEventListener("mouseleave", function () {
-        document.querySelector("body").className = "";
-    });
-}
 setParticles("#000");
-setTimeout(setup, 500);
